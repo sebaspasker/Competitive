@@ -1,0 +1,13 @@
+First Question Explication
+- 1st: Save input's.
+- 2nd: We create a Struct called Friends where we save init and end hours of each event.
+- 3rd: We create a Friend vector that will be all the person's we need. Whe have a self contemplation in friends vector (line 47).
+- 4th: Run all hours and comprobate if we need a new friend in friendComprobation function.
+- 5th: Solapation criteria --> They are 2 cases we have solapation (X2 because we have to comprobate it in both side). Examples:
+  This conditions include if both of hours are inside another one. (Example: First hour --> 1-4, Second hour --> 2-3).
+  - First Hour:  1   4
+    Second Hour:   3   5
+  - First Hour:      4   6
+    Second Hour:   3   5
+- 6th: Case solapation in each friend--> Create a new Friend and add it to vector. Else --> Add hour to not solapated friend.     
+- 7th: Return friend's vector size-1 (Because we have a self contemplation in vector).

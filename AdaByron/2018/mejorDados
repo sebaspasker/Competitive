@@ -1,0 +1,39 @@
+// Hay que hacerlo en cuanto a cuantos gana en cada caso cada numero
+// Olvidaros el numero a priori, clasificadlo en gana/empata/pierde
+
+Programa {
+	while(True) {
+		inputs de numero dados
+		if(numero dados < 2 || numero dado > 100000) break
+		Lista dados1 = input(%s).split()
+		Lista dados2 = input(%s).split()
+		
+		puntuacion1 = 0
+		for(dado en dados1) {
+			if(dado > 10000 || dado < 1) exit
+			for(dado2 en dados2) {
+				if(dado > dado2) {
+					puntuacion1++
+				}
+			}	
+		}
+	
+		puntuacion2 = 0
+		for(dado2 en dados2) {
+			if(dado2 > 10000 || dado2 < 1) exit
+			for(dado en dados1) {
+				if(dado2 > dado) {
+					puntuacion2++;
+				}
+			}
+		}
+		
+		if(puntuacion1 > puntuacion2) {
+			print("PRIMERO")
+		} else if(puntuacion1 < puntuacion2) {
+			print("SEGUNDO")
+		} else {
+			print("NO HAY DIFERENCIA")
+		}
+	}
+}
