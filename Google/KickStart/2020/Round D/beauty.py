@@ -1,7 +1,8 @@
+# https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff08/0000000000386edd
 # NO CONSEGUIDO
-# Para 3 nodos en ese nivel 9 casos 
+# Para 3 nodos en ese nivel 9 casos
 # 1 2 3
-# 1 1 
+# 1 1
 # 1 2
 # 1 3
 # 2 1
@@ -19,11 +20,14 @@ class Node():
     num = 0
     sons = []
 
+
 def Level(node):
     return LevelIt(node, 0)
 
+
 def LevelMaxHoja(root):
     return LevelMaxHojaIt(root, 1)
+
 
 def LevelMaxHojaIt(node, num):
     num2 = num + 1
@@ -43,11 +47,13 @@ def LevelIt(node, num):
     else:
         return LevelIt(node.Parent, num)
 
+
 def numNodesLevel(root, num):
     return numNodesLevelIt(root, num)
 
+
 def numNodesLevelIt(node, num):
-    num2 = num -1
+    num2 = num - 1
     if num2 == 0:
         return 1
     else:
@@ -55,6 +61,7 @@ def numNodesLevelIt(node, num):
         for son in node.sons:
             n += numNodesLevelIt(son, num2)
         return n
+
 
 def baseCaseIt(n, level, it):
     it2 = it + 1
@@ -64,8 +71,10 @@ def baseCaseIt(n, level, it):
     else:
         return baseCaseIt(n, level2, it2)
 
+
 def baseCase(a, level):
     return baseCaseIt(a, level, 0)
+
 
 T = int(input())
 for x in range(0, T):
@@ -89,9 +98,9 @@ for x in range(0, T):
     lresultsb = []
     nodos = []
     for i in range(1, LevelMaxHoja(root)+1):
-        result1 = baseCase(a, i) 
+        result1 = baseCase(a, i)
         result2 = baseCase(b, i)
-        nodos.append(numNodesLevel(root,i))
+        nodos.append(numNodesLevel(root, i))
         lresultsa.append(result1)
         lresultsb.append(result2)
     for i in range(0, len(lresultsa)):
@@ -109,4 +118,3 @@ for x in range(0, T):
     print(lresultsb)
     print(nodos)
     break
-
