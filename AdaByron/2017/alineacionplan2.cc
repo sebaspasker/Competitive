@@ -44,7 +44,7 @@ int gcd(int a, int b) {
 }
 
 int lcm(int a, int b) {
-	if(a==0 || b==0) {
+	if(a == 0 || b == 0) {
 		return 0;
 	
 	} else {
@@ -58,7 +58,7 @@ int main() {
 	while(true ) {
 		int n;
 		scanf("%d", &n);
-		if(n==0) break;
+		if(n == 0) break;
 		string s;
 		cin.ignore();
 		getline(cin , s);

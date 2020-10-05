@@ -33,7 +33,7 @@ def mix(s1, s2):
             elif value > value2:
                 L.append([1, key, value])
             else:
-                L.append([=, key, value])
+                L.append(["=", key, value])
             dict_L2.pop(key)
         else:
             L.append([1, key, value])
@@ -44,9 +44,9 @@ def mix(s1, s2):
     i = 0
     for string_num, letter, times in L:
         result += string_num
-        result += :
+        result += ":"
         result += letter * times
         if i != len(L)-1:
-            result += /
+            result += "/"
         i += 1
     return result

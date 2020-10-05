@@ -65,8 +65,6 @@ int main(){
     // leemos primera linea
     getline(cin, input);
     vector<int> stringV = split(input);
-    numLibros = stringV[0];
-    numLibrerias = stringV[1];
     diasTotales = stringV[2];
 
     // leemos segunda linea
@@ -120,5 +118,4 @@ int main(){
 
 
 		
-}
 }

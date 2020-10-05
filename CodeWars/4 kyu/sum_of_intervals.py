@@ -11,7 +11,7 @@ def sum_of_intervals(intervals):
             first = False
         elif interval[0] <= i_max:
             i_min = i_max
-            i_max = max(i_max,interval[1])
+            i_max = max(i_max, interval[1])
             sum += i_max - i_min
         else:
             i_min = interval[0]
