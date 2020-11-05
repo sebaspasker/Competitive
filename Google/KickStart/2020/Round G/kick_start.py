@@ -21,4 +21,4 @@ for x in range(0, T):
         else:
             num_s.append(f_s)
             begin = f_s + 1
-    print("Case #{}: {}".format(x+1, tot))
+    print("Case #{}: {}".format(x+1, x))

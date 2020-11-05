@@ -16,3 +16,4 @@ for x in range(T):
             ans += needs
             last += needs * K
     print("Case #{}: {}".format(x + 1, ans))
+print("Hola que tal")

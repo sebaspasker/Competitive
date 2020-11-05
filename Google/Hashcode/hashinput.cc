@@ -115,7 +115,4 @@ int main(){
 		
 		vector<int> repetitionId;
 		vector<Library> sortedL;
-
-
-		
 }
